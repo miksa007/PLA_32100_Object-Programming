@@ -10,7 +10,10 @@ public class Tentti2011_05_05 {
 
 }
 class Hirsipuu{
+	private String Arvattava="DIPLOMI-INSINOORI";
+	private String arvaus="*******-********";
 	public void pelaa(){
+		
 		System.out.println("testi");
 	}
 }
