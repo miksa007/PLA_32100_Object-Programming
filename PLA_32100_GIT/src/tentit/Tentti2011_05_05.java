@@ -14,11 +14,30 @@ public class Tentti2011_05_05 {
 
 class Hirsipuu {
 	private Scanner lukija = new Scanner(System.in);
-	private String Arvattava = "DIPLOMI-INSINOORI";
-	private String arvaus =    "*******-*********";
+	private String Arvattava;
+	private String arvaus;
 
+	/**
+	 * Konstruktori kiinteilla arvoilla testaukseen
+	 */
+	public Hirsipuu() {
+		Arvattava = "DIPLOMI-INSINOORI";
+		arvaus = "*******-*********";
+	}
+
+	public Hirsipuu(String Arvattava) {
+		this.Arvattava = Arvattava;
+		for (int i = 0; i < Arvattava.length(); i++) {
+			// TODO Erikoismerkit taytyis poistaa
+			arvaus += "*";
+		}
+
+	}
+
+	/**
+	 * Metodi helpottaa luokan testausta
+	 */
 	public void pelaa() {
-
 		for (int i = 0; i < 10; i++) {
 
 			System.out.println("Anna kirjain");
@@ -27,6 +46,12 @@ class Hirsipuu {
 		}
 	}
 
+	/**
+	 * Arvataan yksi merkki
+	 * 
+	 * @param kirjain
+	 *            kirjain jota etsitaan merkkijonosta
+	 */
 	public void arvaaMerkki(String kirjain) {
 		kirjain = kirjain.toUpperCase();
 		char merkki = kirjain.charAt(0);
