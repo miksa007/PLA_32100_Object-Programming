@@ -11,8 +11,17 @@ public class Tentti2011_05_05 {
 	}
 
 }
-
+/**
+ * Hirsipuu tentti
+ * 
+ * @author mika.saari@tut.fi
+ * @version 9.57.34 28.4.2016
+ *
+ */
 class Hirsipuu {
+	/**
+	 * Scanner luokka kaytossa
+	 */
 	private Scanner lukija = new Scanner(System.in);
 	private String Arvattava;
 	private String arvaus;
@@ -24,7 +33,10 @@ class Hirsipuu {
 		Arvattava = "DIPLOMI-INSINOORI";
 		arvaus = "*******-*********";
 	}
-
+/**
+ * Hirsipuu konstruktori, jossa parametri luo arvattavan sanan
+ * @param Arvattava	T‰t‰ sanaa yritet‰‰n arvata.
+ */
 	public Hirsipuu(String Arvattava) {
 		this.Arvattava = Arvattava;
 		for (int i = 0; i < Arvattava.length(); i++) {
